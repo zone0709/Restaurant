@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -82,7 +82,8 @@ class HomeController extends Controller
         //
     }
     function getHome(){
-        return view('pages/index');
+        $foodtoday = DB::table('foods')->where('today','1')->get();
+        return view('pages/index',['data'=>$foodtoday]);
     }
     function getabout(){
         return view('pages/about');

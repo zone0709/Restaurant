@@ -42,60 +42,17 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div data-height="200" class="products nav-slider">
+                      <?php foreach($data as $f):?>
                       <div class="item product-01">
-                        <div class="item-left"><img src="assets/images/product/product-2a.jpg" alt="" class="img img-responsive">
-                          <div class="content-wrapper"><a href="chi-tiet-mon-an.html" class="title">The Cracker Barrel's Country Boy Breakfast</a>
+                        <div class="item-left"><img src="assets/images/hinh_mon_an/<?=$f->image?>" alt="" class="img img-responsive">
+                          <div class="content-wrapper"><a href="chi-tiet-mon-an.html" class="title"><?=$f->name?></a>
                             <div class="dot">...................</div>
-                            <div class="des">Nguyên liệu: 3 quả dưa chuột, 3 quả cà chua, 1/2 quả dứa, xà lách xoăn, hành tây, tỏi, đường, dấm, ớt.</div>
+                            <div class="des"><?=$f->summary?></div>
                           </div>
                         </div>
-                        <div class="item-right"><span class="price woocommerce-Price-amount amount"><span class="price-symbol">$</span>25.0</span></div>
+                        <div class="item-right"><span class="price woocommerce-Price-amount amount"><?=number_format($f->price)?><span class="price-symbol">vnđ</span></span></div>
                       </div>
-                      <div class="item product-01">
-                        <div class="item-left"><img src="assets/images/product/product-2b.jpg" alt="" class="img img-responsive">
-                          <div class="content-wrapper"><a href="chi-tiet-mon-an.html" class="title">Uncle Herschel's Favorite </a>
-                            <div class="dot">...................</div>
-                            <div class="des">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum </div>
-                          </div>
-                        </div>
-                        <div class="item-right"><span class="price woocommerce-Price-amount amount"><span class="price-symbol">$</span>45.0</span></div>
-                      </div>
-                      <div class="item product-01">
-                        <div class="item-left"><img src="assets/images/product/product-2c.jpg" alt="" class="img img-responsive">
-                          <div class="content-wrapper"><a href="chi-tiet-mon-an.html" class="title">Grandpa's Country Fried Breakfast </a>
-                            <div class="dot">...................</div>
-                            <div class="des">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum </div>
-                          </div>
-                        </div>
-                        <div class="item-right"><span class="price woocommerce-Price-amount amount"><span class="price-symbol">$</span>30.0</span></div>
-                      </div>
-                      <div class="item product-01">
-                        <div class="item-left"><img src="assets/images/product/product-2d.jpg" alt="" class="img img-responsive">
-                          <div class="content-wrapper"><a href="chi-tiet-mon-an.html" class="title">Chinese Chicken Bread Spicy Soup</a>
-                            <div class="dot">...................</div>
-                            <div class="des">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum </div>
-                          </div>
-                        </div>
-                        <div class="item-right"><span class="price woocommerce-Price-amount amount"><span class="price-symbol">$</span>12.0</span></div>
-                      </div>
-                      <div class="item product-01">
-                        <div class="item-left"><img src="assets/images/product/product-2b.jpg" alt="" class="img img-responsive">
-                          <div class="content-wrapper"><a href="chi-tiet-mon-an.html" class="title">Uncle Herschel's Favorite </a>
-                            <div class="dot"> ...................</div>
-                            <div class="des">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum </div>
-                          </div>
-                        </div>
-                        <div class="item-right"><span class="price woocommerce-Price-amount amount"><span class="price-symbol">$</span>45.0</span></div>
-                      </div>
-                      <div class="item product-01">
-                        <div class="item-left"><img src="assets/images/product/product-2a.jpg" alt="" class="img img-responsive">
-                          <div class="content-wrapper"><a class="title">The Cracker Barrel's Country Boy Breakfast</a>
-                            <div class="dot">...................</div>
-                            <div class="des">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum </div>
-                          </div>
-                        </div>
-                        <div class="item-right"><span class="price woocommerce-Price-amount amount"><span class="price-symbol">$</span>25.0</span></div>
-                      </div>
+                      <?php endforeach ?>
                     </div>
                   </div>
                 </div>
